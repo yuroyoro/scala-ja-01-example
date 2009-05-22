@@ -1,0 +1,36 @@
+<lift:surround with="default" at="content">
+<style>
+/* <![CDATA[ */
+div.status{
+  margin-left:200px;
+  width:800px;
+  border-bottom:2px dashed #D2DADA;
+  line-height:1.1em;
+  padding:0.7em 0 0.6em;
+}
+.user_name{
+  font-size:1.5em;
+  color:#6B97D3;
+  font-weight:bold;
+  line-height:1em;
+}
+.message{
+  margin-left:15px;
+  font-size:1.8em;
+  color:#666666;
+}
+
+.profile_img img{
+  maring-right:10px;
+  height:48px;
+  width:48px;
+}
+  
+/* ]]> */
+</style>
+
+
+  <lift:comet type="Twitter" name="Other">
+    <tw:timeline>Missing Timeline</tw:timeline>
+  </lift:comet>
+</lift:surround>

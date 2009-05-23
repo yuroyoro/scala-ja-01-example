@@ -1,9 +1,8 @@
 package com.yuroyoro.scja01ex.comet
 
-import java.net.{Authenticator, PasswordAuthentication}
-import java.net.{URL, HttpURLConnection,URLEncoder}
+import java.net.{URL, HttpURLConnection}
 
-import _root_.scala.xml.XML 
+import _root_.scala.xml.{XML, Text}
 import _root_.scala.util.matching._
 
 import _root_.net.liftweb._
@@ -12,7 +11,6 @@ import util._
 import Helpers._
 import js._
 import JsCmds._
-import _root_.scala.xml.Text
 import S._ 
 import SHtml._
 import JE._
@@ -47,7 +45,7 @@ class Twitter extends CometActor {
            s \ "user" \ "profile_image_url")
         
         since_id = id.toInt
-        partialUpdate(AppendHtml(spanId,
+        partialUpdate(PrependHtml(spanId,
           <div class="status">
             <span class="profile_img"><img src={img_url}/></span>
             <span class="user_name">{user_name}</span>
